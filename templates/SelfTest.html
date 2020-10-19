@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <title>Self Test</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">Corona Notification System</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Login Page<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/RegistrationPage">Registration Page</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/SelfTest">Self Test</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/Home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/DataAnalysis">Data Analysis</a>
+        </li>
+
+
+      </ul>
+
+    </div>
+  </nav>
+
+  <head>
+    <title>Corona Self-Test</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+    <style type="text/css">
+      body {
+        margin: 0px;
+      }
+
+      main {
+        font-family: 'Roboto', sans-serif;
+        background-color: #e8effc;
+      }
+
+      #title {
+        text-align: center;
+        font-size: 43px;
+        color: #000000;
+        padding: 45px 40px 0px 40px;
+        margin-bottom: 5px;
+        margin-top: 20px;
+      }
+
+      #description {
+        text-align: center;
+        font-size: 17px;
+        margin-top: 0px;
+        color: black;
+        padding: 0px 9px 0px 9px;
+      }
+
+      #survey-form {
+        display: flex;
+        flex-direction: column;
+        margin: 40px 320px 0px 320px;
+        padding: 10px 40px 50px 40px;
+        background-color: #624ce0;
+        opacity: 50;
+        border-radius: 5px;
+      }
+
+      label,
+      legend {
+        font-size: 21px;
+        margin-top: 20px;
+        color: black;
+      }
+
+      fieldset label {
+        margin-top: 0px;
+        padding-top: 0px;
+      }
+
+      input {
+        height: 30px;
+        border-radius: 5px;
+        margin-top: 5px;
+        padding-left: 10px;
+      }
+
+      fieldset input {
+        height: 25px;
+        margin-top: 3px;
+        margin-right: 13px;
+      }
+
+      textarea {
+        font-family: 'Roboto', sans-serif;
+        font-size: 15px;
+        padding-top: 10px;
+        padding-left: 10px;
+        margin-top: 10px;
+        height: 80px;
+        border-radius: 5px;
+      }
+
+      button {
+        height: 50px;
+        color: #000000;
+        font-style: 100;
+        margin-top: 40px;
+        border-color: #000000;
+        background-color: #ffffff;
+        opacity: 0.8;
+        font-size: 17px;
+        font-family: 'Roboto', sans-serif;
+        border-radius: 5px;
+        padding-left: 10px;
+      }
+
+      button:active {
+        color: #ffffff;
+        background-color: black;
+      }
+
+      select {
+        height: 33px;
+        border-radius: 5px;
+      }
+
+      #radd {
+        display: flex;
+        align-items: center;
+      }
+
+      fieldset {
+        margin-top: 20px;
+      }
+
+      footer {
+        text-align: center;
+        font-size: 30px;
+        background-color: #e8effc;
+        color: #03252a;
+        padding: 40px;
+      }
+
+      footer p {
+        margin: 0;
+      }
+
+      @media (max-width: 1024px) {
+
+        #title {
+          font-size: 33px;
+          font-weight: 400;
+        }
+
+        #description {
+          font-size: 13px;
+          margin-top: 2px;
+        }
+
+        #survey-form {
+          margin: 40px 0px 20px 0px;
+          padding: 10px 20px 20px 20px;
+          border-radius: 2px;
+        }
+
+        label,
+        legend {
+          font-size: 18px;
+        }
+
+        footer {
+          font-size: 20px;
+          padding: 20px;
+        }
+
+        #survey-form {
+          margin-bottom: 0px;
+        }
+
+        button {
+          margin-top: 23px;
+          height: 37px;
+          margin-bottom: 13px;
+        }
+
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <h1 id="title">
+        <center><strong> Corona Self-Test </strong></center>
+      </h1>
+      <p id="description">The purpose of the Corona Self-Checker is to help you make decisions about seeking appropriate
+        medical care.This system is not intended for the diagonosis or treatment of disease or other
+        conditions,including Covid-19.This tool will help you assess your symptoms and provide all safetys measures you
+        should have to follow.</p>
+
+      <form id="survey-form" action="#">
+        <label for="name" id="name-label"> Name </label>
+        <input id="name" type="text" name="name" placeholder="Your Name" required>
+
+        <label for="email" id="email-label"> Email </label>
+        <input id="email" type="email" name="email" placeholder="Your email" required>
+
+        <label for="number" id="number-label"> Age </label>
+        <input id="number" type="number" min="0" max="150" name="number" placeholder="Age">
+
+        <label for="dropdown"> Location </label>
+        <select name="lga" id="dropdown" required>
+          <option></option>
+          <option value="Andhra Pradesh">Andhra Pradesh</option>
+          <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+          <option value="Assam">Assam</option>
+          <option value="Bihar">Bihar</option>
+          <option value="Chattisgarh">Chattisgarh</option>
+          <option value="Delhi">Delhi</option>
+          <option value="Gujarat">Gujarat</option>
+          <option value="Haryana">Haryana</option>
+          <option value="Himachal Pradesh">Himachal Pradesh</option>
+          <option value="Jharkhand">Jharkhand</option>
+          <option value="Karnataka">Karnataka</option>
+          <option value="Kerela">Kerela</option>
+          <option value="Madhya Pradesh">Madhya Pradesh</option>
+          <option value="Maharashtra">Maharashtra</option>
+          <option value="Punjab">Punjab</option>
+          <option value="Rajasthan">Rajasthan</option>
+          <option value="Tamil Nadu">Tamil Nadu</option>
+          <option value="Uttar Pradesh">Uttar Pradesh</option>
+          <option value="Uttrakhand">Uttrakhand</option>
+          <option value="West Bengal">West Bengal</option>
+          <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+        </select>
+
+        <fieldset>
+          <legend> Are you feeling sick? </legend>
+          <div id="radd">
+            <input id="sick" type="radio" name="sick" value="Yes">
+            <label for="sick">Yes</label>
+          </div>
+
+          <div id="radd">
+            <input id="sick" type="radio" name="sick" value="No">
+            <label for="sick">No</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend> Are you answering for yourself or someone else? </legend>
+          <div id="radd">
+            <input id="answer" type="radio" name="answer" value="Yes">
+            <label for="answer">Yes</label>
+          </div>
+
+          <div id="radd">
+            <input id="answer" type="radio" name="answer" value="No">
+            <label for="answer">No</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend> How often do you use a mask? </legend>
+          <div id="radd">
+            <input id="mask" type="radio" name="mask" value="Not at all">
+            <label for="mask">Not at all</label>
+          </div>
+
+          <div id="radd">
+            <input id="mask" type="radio" name="mask" value="Often">
+            <label for="mask">Often</label>
+          </div>
+
+          <div id="radd">
+            <input id="mask" type="radio" name="mask" value="Very often">
+            <label for="mask">Very often</label>
+          </div>
+
+          <div id="radd">
+            <input id="mask" type="radio" name="mask" value="Always">
+            <label for="mask">Always</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend> How often do you observe social distancing? </legend>
+          <div id="radd">
+            <input id="distance" type="radio" name="distance" value="Not at all">
+            <label for="distance">Not at all</label>
+          </div>
+
+          <div id="radd">
+            <input id="distance" type="radio" name="distance" value="Often">
+            <label for="distance">Often</label>
+          </div>
+
+          <div id="radd">
+            <input id="distance" type="radio" name="distance" value="Very often">
+            <label for="distance">Very often</label>
+          </div>
+
+          <div id="radd">
+            <input id="distance" type="radio" name="distance" value="Always">
+            <label for="distance">Always</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend> Have you been tested for COVID-19?</legend>
+          <div id="radd">
+            <input id="test" type="radio" name="test" value="yes">
+            <label for="test">Yes</label>
+          </div>
+
+          <div id="radd">
+            <input id="test" type="radio" name="test" value="no">
+            <label for="test">No</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend> Are you Currently experiencing such issues? </legend>
+          <div id="radd">
+            <input id="issue" type="radio" name="issue" value="Severe difficulty breathing">
+            <label for="issue">Severe difficulty breathing</label>
+          </div>
+
+          <div id="radd">
+            <input id="issue" type="radio" name="issue" value="Severe chest pain">
+            <label for="issue">Severe chest pain</label>
+          </div>
+
+          <div id="radd">
+            <input id="issue" type="radio" name="issue" value="Losing consciousness">
+            <label for="issue">Losing consciousness</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend> What symptoms did you experience to make you request for a test? (Select all that apply)</legend>
+          <div id="radd">
+            <input id="symptom" type="checkbox" name="symptom" value="fever">
+            <label for="symptom">Fever</label>
+          </div>
+
+          <div id="radd">
+            <input id="symptom" type="checkbox" name="symptom" value="dry cough">
+            <label for="symptom">Dry cough</label>
+          </div>
+
+          <div id="radd">
+            <input id="symptom" type="checkbox" name="symptom" value="tiredness">
+            <label for="symptom">Tiredness</label>
+          </div>
+
+          <div id="radd">
+            <input id="symptom" type="checkbox" name="symptom" value="aches and pains">
+            <label for="symptom">Aches and pains</label>
+          </div>
+
+          <div id="radd">
+            <input id="symptom" type="checkbox" name="symptom" value="Sore throat">
+            <label for="symptom">Sore throat</label>
+          </div>
+
+          <div id="radd">
+            <input id="symptom" type="checkbox" name="symptom" value="Runny nose">
+            <label for="symptom">Runny nose</label>
+          </div>
+
+          <div id="radd">
+            <input id="symptom" type="checkbox" name="symptom" value="Vomiting,Nausea,diarrhea">
+            <label for="symptom">Vomiting,Nausea,diarrhea</label>
+          </div>
+
+          <div id="radd">
+            <input id="symptom" type="checkbox" name="symptom" value="Headache">
+            <label for="symptom">Headache</label>
+          </div>
+
+          <div id="radd">
+            <input id="symptom" type="checkbox" name="symptom" value="Loss of taste and smell">
+            <label for="symptom">Loss of taste and smell</label>
+          </div>
+
+          <div id="radd">
+            <input id="symptom" type="checkbox" name="symptom" value="Bluish lips or face">
+            <label for="symptom">Bluish lips or face</label>
+          </div>
+
+          <div id="radd">
+            <input id="symptom" type="checkbox" name="symptom" value="None of the above">
+            <label for="symptom">None of the above</label>
+          </div>
+        </fieldset>
+
+        <button id="submit" type="submit"> Submit </button>
+      </form>
+    </main>
+
+    <footer>
+      <p>Thank you for taking the time to complete the self-test!</p>
+    </footer>
+
+    </form>
+    </div>
+  </body>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

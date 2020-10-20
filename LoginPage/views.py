@@ -24,4 +24,4 @@ def DataAnalysis(request):
 
 def ContactAs(request):
    # return HttpResponse('Here is the ContactAs page')
-      return render(request, 'ContactAs')
+      return render(request, 'ContactAs.html')

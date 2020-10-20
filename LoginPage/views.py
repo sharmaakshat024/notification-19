@@ -21,3 +21,7 @@ def Home(request):
 def DataAnalysis(request):
    # return HttpResponse('Here is the DataAnalysis page')
       return render(request, 'DataAnalysis.html')
+
+def ContactAs(request):
+   # return HttpResponse('Here is the ContactAs page')
+      return render(request, 'ContactAs')

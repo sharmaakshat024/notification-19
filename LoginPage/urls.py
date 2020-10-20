@@ -7,4 +7,5 @@ urlpatterns = [
     path('SelfTest', views.SelfTest, name = 'SelfTest'),
     path('Home', views.Home, name = 'Home'),
     path('DataAnalysis', views.DataAnalysis, name = 'DataAnalysis'),
+    path('ContactAs', views.ContactAs, name = 'ContactAs'),
 ]

@@ -1,3 +1,4 @@
 from django.contrib import admin
+from LoginPage.models import RegistrationPage
 
-# Register your models here.
+admin.site.register(RegistrationPage)

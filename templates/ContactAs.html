@@ -48,6 +48,93 @@
     </div>
   </nav>
 
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <title>Contact As</title>
+</head>
+<style>
+     body {
+         background-color:9f93f5;
+         font-family: 'josefin Sans', Sans-series;
+      }
+      img{
+          position: absolute;
+          width: 100%;
+          height:100%;
+      }
+     .radio.inline{
+          margin: 0px 40px 20px 0px;
+          cursor:pointer;
+      }
+
+      label{
+          color: #000;
+      }
+
+      #text{
+          height:40px;
+          border-radius: 5px;
+          padding-left:10px;
+          font-size: 14px;
+          width: 100%;
+          color:#000;
+           }
+           #message{
+               padding: 10px 0px opx 15px;
+               font-size: 16px;
+               color:#000;
+               border-radius: 5px;
+               width:   100%;
+           }
+</style>
+<body>
+    <div class="view">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQu3JROGTrDtnlqe_TftRhJD7L2eOkCJQGUYg&usqp=CAU">
+    </div>
+     <div class="container">
+         <div class="row">
+             <div class="col-md-2"></div>
+             <div class="col-md-8">
+
+                <h1 class="text-center mt-5 font-weight-bold">Contact-us / Drop your message here!</h1>
+                <hr class="bg-white">
+                <h6 class="text-center">Please drop your info here!</h6>
+                <h3 class="mt-4">How do you rate your overall experience?</h3>
+
+                <form>
+                    <label class="radio-inline"><input type="radio" name="experience" value="bad">Bad</label>
+                    <label class="radio-inline"><input type="radio" name="experience" value="average">Average</label>
+                    <label class="radio-inline"><input type="radio" name="experience" value="good">Good</label>
+                
+             </div>
+         </div>
+         <div class="row">
+             <div class="col-md-2"></div>
+              <label class="col-md-4">Full Name*<br>
+                <input type="text" id="text" required="" placeholder="Joffer Archer"></label>
+
+                <label class="col-md-4">Email-id*<br>
+                    <input type="text" id="text" required="" placeholder="theprovider@gmail.com"></label>
+   </div>
+    
+   <div class="row">
+       <div class="col-md-2"></div>
+       <label class="col-md-8">Message*<br>
+    <textarea id="message" required="" placeholder="Write your message here" cols="48" rows="5"></textarea></label>
+   </div>
+
+   <div class="row">
+       <div class="col-md-2"></div>
+       <button class="btn btn-primary" style="width: 53.5%; position: absolute; margin-left: 15%;">Submit</button>
+       </div>
+    </form>
+ </div>
+</body>
+
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

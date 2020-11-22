@@ -9,20 +9,23 @@ def LoginPage(request):
 
 def registrationPage(request):
    # return HttpResponse('Here is the Registraion page')
-    if request.method=="POST":
+   if request.method=="POST":
      
       FirstName = request.POST['FirstName']
-      LastName = request.POST['LastName']
-      Email = request.POST['Email']
-      Password = request.POST['Password']
-      ConfirmPasword = request.POST['ConfirmPassword']
-      DateOfBirth = request.POST['DateOfBirth']
-      PhoneNumber = request.POST['PhoneNumber']
-     # print(name, email, phone, desc)
-      RegistrationPage = RegistrationPage(FirstName=FirstName, LastName=LastName, Email=Email, Password=Password, ConfirmPasword=ConfirmPasword, DateOfBirth=DateOfBirth,  PhoneNumber= PhoneNumber)
-      RegistrationPage.save()
-      print("The data has been written to the db")
-      return render(request, 'RegistrationPage.html')
+      lastName = request.POST['lastName']
+      email = request.POST['email']
+      password = request.POST['password']
+      confirmpassword = request.POST['password']
+      birthDate = request.POST['birthDate']
+      phoneNumber = request.POST['phoneNumber']
+      print(FirstName,lastName,email,password,confirmpassword,birthDate,phoneNumber)
+      ins = RegistrationPage(FirstName=FirstName, lastName=lastName, email=email, password=password, confirmpassword=password, birthDate=birthDate,  phoneNumber= phoneNumber)
+      ins.save()
+      context = {'success': True}
+      #RegistrationPage = RegistrationPage(FirstName=FirstName, lastName=lastName, email=email, password=password, confirmpassword=password, birthDate=birthDate,  phoneNumber= phoneNumber)
+      #RegistrationPage.save()
+      #print("The data has been written to the db")
+   return render(request, 'RegistrationPage.html', context)
 
 def SelfTest(request):
    # return HttpResponse('Here is the Registraion page')

@@ -33,11 +33,6 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'LoginPage',
-    'RegistrationPage',
-    'SelfTest',
-    'Home',
-    'DataAnalysis',
-    'ContactAs',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
